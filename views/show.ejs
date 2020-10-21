@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h5>NAME:</h5>
+
+    <h6><%=person.name%></h6>
+    <h5>AGE:</h5>
+    <h6><%=person.age%></h6>
+
+    <div class="action-btns">
+      <button type="button" name="button" class="edit-btn"><a href="/people/<%=person._id%>/edit">EDIT</a></button>
+      <form action="/people/<%=person._id%>?_method=DELETE" method="POST" class="delete-btn">
+          <input type="submit" value="DELETE"/>
+      </form>
+    </div>
+  </body>
+</html>

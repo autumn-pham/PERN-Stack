@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    Name:
+    <%=person.rows[0].name%>
+    Age:
+    <%=person.rows[0].age%>
+
+
+    <div class="action-btns">
+      <button type="button" name="button" class="edit-btn"><a href="/people/<%=person.rows[0].id%>/edit">EDIT</a></button>
+      <form action="/people/<%=person.rows[0].id%>?_method=DELETE" method="POST" class="delete-btn">
+          <input type="submit" value="DELETE"/>
+      </form>
+    </div>
+
+  </body>
+</html>

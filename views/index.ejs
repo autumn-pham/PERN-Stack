@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+  </head>
+  <body>
+
+
+    <!-- MAIN STATIC STUFF  -->
+
+
+
+    <!-- ENTRIES -->
+      <h4>ENTRIES</h4>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let i = 0; i < people.length; i++) { %>
+          <tr>
+            <td><a href="/people/<%= people[i].id %>"><%= people[i].name %></a></td>
+            <td><%= people[i].age %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+
+
+      <form action="/people" method="POST">
+                <div class="form-group">
+                  <label for="name">NAME:</label>
+                  <input type="text" name="name" required />
+                  <label for="age">AGE:</label>
+                  <input type="text" name="age" required />
+                  <input type="submit" value="ADD" class="add-btn" />
+                </div>
+          </form>
+
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+
+    </footer>
+  </body>
+</html>
